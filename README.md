@@ -80,11 +80,7 @@ python join_stream.py
 ### **3. Verify Data in MongoDB**
 Once the data is processed and written to MongoDB, you can use MongoDB Atlas to check if the data is induced:
 
-```bash
-
-
-## **Project Workflow**
-
+## Project Workflow
 1. **Kafka Streaming**: 
    - Data is produced by Kafka producers (`orders_producer.py` and `payment_producer.py`) and streamed into `orders_topic_data_v1` and `payments_topic_data_v1`.
    
@@ -95,18 +91,17 @@ Once the data is processed and written to MongoDB, you can use MongoDB Atlas to 
 3. **MongoDB Storage**:
    - The final joined data is written to MongoDB, allowing for fast querying and further analytics.
 
-## **Screenshots**
+## Screenshots
 
-### GCP Haddop Cluster
-![GCP Bucket Checkpoint](/images/hadoop_cluster.jpg)
+### GCP Hadoop Cluster
+![GCP Hadoop Cluster](/images/hadoop_cluster.jpg)
 
 ### GCP Bucket Checkpoint
 ![GCP Bucket Checkpoint](/images/checkpoint.jpg)
 
 ### Kafka Topics
-![Kafka Topics](/images/kafka_topic_order.jpg)
-
-![Kafka Topics 2](/images/kafka_topic_payment.png)
+![Kafka Topics - Orders](/images/kafka_topic_order.jpg)
+![Kafka Topics - Payments](/images/kafka_topic_payment.png)
 
 ### Spark Job Execution in GCP Dataproc Console
 ![GCP Console](/images/gcp_console.jpg)
@@ -118,20 +113,14 @@ Once the data is processed and written to MongoDB, you can use MongoDB Atlas to 
 ![Payments Data Producer](/images/payment_producer.jpg)
 
 ### MongoDB Results Dashboard
-![MongoDB Dashboard](/images/mongo_db_output.jpgjpg)
-
+![MongoDB Dashboard](/images/mongo_db_output.jpg)
 
 ### Note on Payment Producer
-
 The payment producer implemented here is a single row data producer created for learning purposes. It simulates how data is being generated and combined, giving you an understanding of the data flow. This is a preliminary step to help you grasp the fundamentals before attempting to simulate a continuous data stream in a real-world use case.
 
 The goal is to first comprehend how individual data points are generated, processed, and combined before scaling up to a more complex, continuous data production model.
 
-
-## **Future Enhancements**
-
+## Future Enhancements
 - **Error Handling & Fault Tolerance**: Implement better error handling and resilience strategies, such as retry mechanisms and better logging.
 - **Scalability**: Optimize Spark job configuration to handle larger volumes of data more efficiently.
 - **Real-time Analytics**: Integrate real-time dashboards for monitoring the processed data stored in MongoDB.
-
-
