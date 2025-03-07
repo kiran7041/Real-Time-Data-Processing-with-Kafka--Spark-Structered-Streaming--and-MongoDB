@@ -101,7 +101,8 @@ Once the data is processed and written to MongoDB, you can use MongoDB Atlas to 
 
 ### Kafka Topics
 ![Kafka Topics - Orders](/images/kafka_topic_order.jpg)
-![Kafka Topics - Payments](/images/kafka_topic_payment.png)
+
+![Kafka Topics - Payments](/images/kafka_topic_payment.jpg)
 
 ### Spark Job Execution in GCP Dataproc Console
 ![GCP Console](/images/gcp_console.jpg)
